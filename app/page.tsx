@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import NovatrixBackground from "@/components/ui/novatrix-background"
+import VantaGlobe from "@/components/ui/VantaGlobe";
 // 使用说明
 // 1. 全局替换 profile 与内容占位
 // 2. 将简历 PDF 放到 /public/cv.pdf 然后更新 cvUrl
@@ -417,32 +418,32 @@ function AuroraBackground(){
     </div>
   );
 }
-
 export default function PersonalHomepage() {
   return (
     <div className="relative min-h-screen text-neutral-900 dark:text-neutral-50">
-      {/* 背景始终在最底层 */}
-      <div className="fixed inset-0 -z-10">
+      {/* === 最底层：灰白流动背景 === */}
+      <div className="fixed inset-0 -z-20">
         <NovatrixBackground
-  color={[0.7, 0.7, 0.7]}  // 灰色主调
-  speed={0.8}
-  amplitude={0.05}
-  mouseReact
-/>
-
+          color={[0.7, 0.7, 0.7]}
+          speed={0.8}
+          amplitude={0.05}
+          mouseReact
+        />
       </div>
 
-      {/* 白色内容容器，四周略透 */}
-      <div className="relative z-10 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-sm min-h-screen rounded-t-3xl shadow-lg overflow-hidden">
+      {/* === 白色主层（内容） === */}
+      <div className="relative z-20 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-sm min-h-screen shadow-lg overflow-hidden">
         <TopNav />
         <main>
           <Hero />
           <Projects />
           <ReadingGroup />
-          {/* <Publications /> */}
-          {/* <Teaching /> */}
-          {/* <Awards /> */}
           <CV />
+          
+          {/* === 球体层：在 CV 下方,作为页面内容 === */}
+          <div className="relative w-full h-[400px] overflow-hidden">
+            <VantaGlobe />
+          </div>
         </main>
         <Footer />
       </div>
