@@ -21,7 +21,7 @@ const profile = {
   affiliation: "University of Wisconsin-Madison, Computer Science",
   email: "zhang2968@wisc.edu",
   location: "Madison, Wisconsin, United States",
-  avatar: "", // 可放头像链接 可留空
+  avatar: "/avator.png", // 可放头像链接 可留空
   socials: {
     github: "https://github.com/ELAINZ",
     // scholar: "https://scholar.google.com/citations?user=xxxxx",
@@ -238,11 +238,19 @@ function Hero(){
             ))}
           </ul>
         </div>
-        <div className="w-full md:w-64">
+        <div className="w-full md:w-64 flex flex-col gap-4">
+          {profile.avatar && (
+            <div className="w-full">
+              <img
+                src={profile.avatar}
+                alt={profile.nameEn}
+                className="w-50 h-55 object-cover rounded-lg shadow-md border border-neutral-200 dark:border-neutral-800"
+              />
+            </div>
+          )}
           <Card className="overflow-hidden">
             <CardHeader>
-              <CardTitle className="text-base">Quick links</CardTitle>
-              {/* <CardDescription>A quick link to my other websites.</CardDescription> */}
+              <CardTitle className="text-base">Quick Links</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-3 text-sm">
               <a className="underline" href="#projects">Projects</a>
@@ -252,6 +260,7 @@ function Hero(){
             </CardContent>
           </Card>
         </div>
+
       </div>
     </Section>
   );
