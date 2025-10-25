@@ -21,7 +21,7 @@ const profile = {
   affiliation: "University of Wisconsin-Madison, Computer Science",
   email: "zhang2968@wisc.edu",
   location: "Madison, Wisconsin, United States",
-  avatar: "/avator.png", // 可放头像链接 可留空
+  avatar: "./avator.png", // 可放头像链接 可留空
   socials: {
     github: "https://github.com/ELAINZ",
     // scholar: "https://scholar.google.com/citations?user=xxxxx",
@@ -29,7 +29,7 @@ const profile = {
     // twitter: "https://twitter.com/yourname",
     // website: "https://yourdomain.com"
   },
-  cvUrl: "/Yiheng_ZHANG_s_Resume.pdf"
+  cvUrl: "./Yiheng_ZHANG_s_Resume.pdf"
 };
 
 const highlights = [
