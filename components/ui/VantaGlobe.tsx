@@ -23,7 +23,7 @@ export default function VantaGlobe() {
       color: 0x9ca3af,        // 主线颜色：银灰
       color2: 0x3b82f6,       // 副色：低饱和蓝（科技感）
       size: 1.2,
-      backgroundColor: 0x0f0f0f, // 背景深灰黑，和主页黑白灰协调
+      backgroundColor: 0xf7f7f7, // 背景深灰黑，和主页黑白灰协调
     });
 
     }
