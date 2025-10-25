@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
+import NovatrixBackground from "@/components/ui/novatrix-background"
 // 使用说明
 // 1. 全局替换 profile 与内容占位
 // 2. 将简历 PDF 放到 /public/cv.pdf 然后更新 cvUrl
@@ -14,54 +14,64 @@ import { Textarea } from "@/components/ui/textarea";
 // 4. 发布到 GitHub Pages 或 Netlify 即可
 
 const profile = {
-  nameZh: "你的中文名",
-  nameEn: "Your Name",
+  nameEn: "Yiheng Zhang",
+  nameZh: "(张怡蘅)",
   title: "PhD Applicant in Computer Science",
-  affiliation: "Your University, Department",
-  email: "your.name@university.edu",
-  location: "City, Country",
+  affiliation: "University of Wisconsin-Madison, Computer Science",
+  email: "zhang2968@wisc.edu",
+  location: "Madison, Wisconsin, United States",
   avatar: "", // 可放头像链接 可留空
   socials: {
-    github: "https://github.com/yourname",
-    scholar: "https://scholar.google.com/citations?user=xxxxx",
-    linkedin: "https://www.linkedin.com/in/yourname/",
-    twitter: "https://twitter.com/yourname",
-    website: "https://yourdomain.com"
+    github: "https://github.com/ELAINZ",
+    // scholar: "https://scholar.google.com/citations?user=xxxxx",
+    linkedin: "https://www.linkedin.com/in/yiheng-zhang-4a7023329/",
+    // twitter: "https://twitter.com/yourname",
+    // website: "https://yourdomain.com"
   },
-  cvUrl: "/cv.pdf"
+  cvUrl: "/Yiheng_ZHANG_s_Resume.pdf"
 };
 
 const highlights = [
+  
   {
-    icon: <Sparkles className="h-5 w-5" />,
-    text: "研究方向 例如 LLM 安全 强化学习 可解释性"
+    text: `I am Yiheng Zhang, a senior student at University of Wisconsin-Madison studying computer science, advised by <a href="https://grigoris.ece.wisc.edu/group.html" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:underline">Prof. Grigoris Chrysos</a>.  My GPA during the study in University of Wisconsin-Madison was 3.95/4.0.`
   },
   {
-    icon: <GraduationCap className="h-5 w-5" />,
-    text: "目标 2026 秋季博士入学，专注 XXX 方向"
+    text:"My research interests are machine learning and natural language processing, with a focus on large language models (LLMs), diffusion language models (DLLMs), and trustworthy AI. In particular, my projects focused on teaching small arithmetic tasks to transformer, and remasking skills in diffusion language models."
   },
   {
-    icon: <Globe className="h-5 w-5" />,
-    text: "开源项目与数据集 欢迎合作"
-  }
+    text: "I am currently applying to Ph.D. programs for Fall 2026 and internships for Summer 2026. Please feel free to contact me if you think I would be a good fit. Thank you."
+  },
+  // {
+  //   icon: <Sparkles className="h-5 w-5" />,
+  //   text: "Architecture design, Trustworthy Machine Learning"
+  // },
+  // // {
+  // //   icon: <Globe className="h-5 w-5" />,
+  // //   text: "Currently focusing on diffusion language models"
+  // // },
+  // {
+  //   icon: <GraduationCap className="h-5 w-5" />,
+  //   text: "Open for 2026 Phd! Please contact me if you are interested, thank you."
+  // },
 ];
 
 const projects = [
   {
-    title: "Project Alpha",
-    role: "First Author",
-    period: "2024",
-    desc: "一句话概述 项目成果与影响",
-    tags: ["LLM", "Alignment"],
-    links: [{ label: "Paper", href: "#" }, { label: "Code", href: "#" }]
+    title: "Large Language Models for Arithmetic Reasoning",
+    role: "Machine Learning",
+    period: "Feb. 2025 - Jun. 2025",
+    desc: "Designed and experimented over arithmetic tasks on Large Language Models, resulted in better generalization length",
+    tags: ["LLM", "Machine Learning"],
+    links: []
   },
   {
-    title: "Project Beta",
-    role: "Co-author",
-    period: "2023",
-    desc: "一句话概述",
-    tags: ["Vision", "Robotics"],
-    links: [{ label: "Website", href: "#" }]
+    title: "Diffusion Language Models and Remasking",
+    role: "Machine Learning",
+    period: "May. 2025 - Today",
+    desc: "Implemented the code base for diffusion training, currently working on remasking tasks.",
+    tags: ["Diffusion Language Models", "Deep Learning"],
+    links: []
   }
 ];
 
@@ -77,31 +87,55 @@ const publications = [
 
 const readingGroup = {
   name: "Reading Group on Trustworthy ML",
-  desc: "面向博士申请与研究新生的长期阅读小组",
-  schedule: "每周三 19:00 CST 线上 Zoom",
-  organizers: ["Your Name", "Teammate"],
+  desc: "Internal reading group for sharing SoTA papers and new ideas.",
+  schedule: "Every Wednesday and Friday",
+  organizers: ["Grigoris Chrysos", "Professor"],
   contact: "your.name@university.edu",
   joinForm: "#",
   sessions: [
     {
-      date: "2025-11-05",
-      title: "RLHF 综述快速入门",
-      speaker: "Your Name",
-      material: "#"
+      date: "2025-05-30",
+      title: "Understanding Diffusion Models: A Unified Perspective",
+      // speaker: "Your Name",
+      material: "https://drive.google.com/file/d/1Yt_c1p8qyv3DihARld6MgfAeNe4aM71U/view?usp=sharing"
     },
     {
-      date: "2025-11-12",
-      title: "Constitutional AI 论文精读",
-      speaker: "Alice",
-      material: "#"
+      date: "2025-06-10",
+      title: "DDPM, DDIM and Guidance",
+      // speaker: "Alice",
+      material: "https://drive.google.com/file/d/17d3So4415Uq-Usl0jDVcEZhDcFy7HObk/view"
+    },
+    {
+      date: "2025-06-19",
+      title: "Large Language Diffusion Models",
+      // speaker: "Alice",
+      material: "https://arxiv.org/abs/2502.099922"
+    },
+    {
+      date: "2025-09-10",
+      title: "Demystifying Foreground-Background Memorization in Diffusion Models",
+      // speaker: "Alice",
+      material: "https://arxiv.org/abs/2502.099922"
+    },
+    {
+      date: "2025-09-26",
+      title: "Persona Features Control Emergent Misalignment",
+      // speaker: "Alice",
+      material: "https://arxiv.org/abs/2506.19823"
+    },
+    {
+      date: "2025-10-10",
+      title: "TraceDet: Hallucination Detection from the Decoding Trace of Diffusion Large Language Models",
+      // speaker: "Alice",
+      material: "https://drive.google.com/file/d/1PRdDfhbDMTmIuYEqG2gyFb1cTGQPZd4h/view?usp=sharing"
     }
   ]
 };
 
-const awards = [
-  { year: "2024", text: "National Scholarship" },
-  { year: "2023", text: "Best Undergraduate Thesis" }
-];
+// const awards = [
+//   { year: "2024", text: "National Scholarship" },
+//   { year: "2023", text: "Best Undergraduate Thesis" }
+// ];
 
 const teaching = [
   { term: "Fall 2024", course: "CS XXX Machine Learning", role: "TA" }
@@ -148,12 +182,12 @@ function TopNav(){
       <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
         <a href="#home" className="font-semibold">{profile.nameEn}</a>
         <nav className="flex items-center gap-4">
-          <NavLink href="#home" label="主页" />
+          <NavLink href="#home" label="HomePage" />
           <NavLink href="#projects" label="Projects" />
           <NavLink href="#reading" label="Reading Group" />
-          <NavLink href="#pubs" label="Publications" />
+          {/* <NavLink href="#pubs" label="Publications" />
           <NavLink href="#teaching" label="Teaching" />
-          <NavLink href="#awards" label="Awards" />
+          <NavLink href="#awards" label="Awards" /> */}
           <NavLink href="#cv" label="CV" />
           <button aria-label="Dark mode" className="p-2 rounded-xl border" onClick={()=>setDark(v=>!v)}>
             {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
@@ -170,7 +204,7 @@ function Hero(){
       <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
         <div className="flex-1">
           <motion.h1 initial={{opacity:0, y:10}} animate={{opacity:1, y:0}} className="text-3xl md:text-4xl font-bold">
-            {profile.nameZh} {profile.nameEn}
+            {profile.nameEn} {profile.nameZh}
           </motion.h1>
           <p className="mt-2 text-neutral-600 dark:text-neutral-300">{profile.title} · {profile.affiliation}</p>
           <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -187,23 +221,27 @@ function Hero(){
                 <Linkedin className="h-4 w-4" /> LinkedIn
               </a>
             )}
-            {profile.socials.twitter && (
+            {/* {profile.socials.twitter && (
               <a className="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-xl border" href={profile.socials.twitter} target="_blank" rel="noreferrer">
                 <Twitter className="h-4 w-4" /> X
               </a>
-            )}
+            )} */}
           </div>
-          <ul className="mt-6 grid gap-2">
-            {highlights.map((h, i)=> (
-              <li key={i} className="flex items-start gap-2 text-sm"><span className="mt-0.5">{h.icon}</span><span>{h.text}</span></li>
+          <ul className="mt-6 grid gap-4">
+            {highlights.map((h, i) => (
+              <li
+                key={i}
+                className="text-sm whitespace-pre-line leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: h.text }}
+              />
             ))}
           </ul>
         </div>
         <div className="w-full md:w-64">
           <Card className="overflow-hidden">
             <CardHeader>
-              <CardTitle className="text-base">快速入口</CardTitle>
-              <CardDescription>常用链接</CardDescription>
+              <CardTitle className="text-base">Quick links</CardTitle>
+              {/* <CardDescription>A quick link to my other websites.</CardDescription> */}
             </CardHeader>
             <CardContent className="grid gap-3 text-sm">
               <a className="underline" href="#projects">Projects</a>
@@ -237,7 +275,7 @@ function Projects(){
               </div>
               <div className="flex flex-wrap gap-3">
                 {p.links.map((l, k)=>(
-                  <a key={k} className="text-sm underline" href={l.href} target="_blank" rel="noreferrer">{l.label}</a>
+                  <a key={k} className="text-sm underline" target="_blank" rel="noreferrer"></a>
                 ))}
               </div>
             </CardContent>
@@ -282,16 +320,15 @@ function ReadingGroup(){
   return (
     <Section id="reading" title="Reading Group" icon={<Users className="h-6 w-6" /> }>
       <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-4">{readingGroup.desc}</p>
-      <div className="mb-4 text-sm">时间 {readingGroup.schedule}</div>
-      <div className="mb-6 text-sm">组织者 {readingGroup.organizers.join("、")} 联系 {readingGroup.contact} <a className="underline" href={readingGroup.joinForm}>报名</a></div>
-      <div className="overflow-x-auto">
+      <div className="mb-4 text-sm">Time {readingGroup.schedule}</div>
+      <div className="mb-6 text-sm"> {} 
         <table className="w-full text-sm border">
           <thead>
             <tr className="bg-neutral-50 dark:bg-neutral-900">
-              <th className="p-2 text-left">日期</th>
-              <th className="p-2 text-left">主题</th>
-              <th className="p-2 text-left">主讲</th>
-              <th className="p-2 text-left">材料</th>
+              <th className="p-2 text-left">Date</th>
+              <th className="p-2 text-left">Theme</th>
+              {/* <th className="p-2 text-left"></th> */}
+              <th className="p-2 text-left">Material</th>
             </tr>
           </thead>
           <tbody>
@@ -299,8 +336,8 @@ function ReadingGroup(){
               <tr key={i} className="border-t">
                 <td className="p-2 align-top">{s.date}</td>
                 <td className="p-2 align-top">{s.title}</td>
-                <td className="p-2 align-top">{s.speaker}</td>
-                <td className="p-2 align-top"><a className="underline" href={s.material}>链接</a></td>
+                {/* <td className="p-2 align-top">{s.speaker}</td> */}
+                <td className="p-2 align-top"><a className="underline" href={s.material}>Link</a></td>
               </tr>
             ))}
           </tbody>
@@ -323,27 +360,27 @@ function Teaching(){
   );
 }
 
-function Awards(){
-  if (!awards.length) return null;
-  return (
-    <Section id="awards" title="Awards" icon={<Calendar className="h-6 w-6" /> }>
-      <ul className="text-sm space-y-2">
-        {awards.map((a, i)=>(
-          <li key={i}>{a.year} · {a.text}</li>
-        ))}
-      </ul>
-    </Section>
-  );
-}
+// function Awards(){
+//   if (!awards.length) return null;
+//   return (
+//     <Section id="awards" title="Awards" icon={<Calendar className="h-6 w-6" /> }>
+//       <ul className="text-sm space-y-2">
+//         {awards.map((a, i)=>(
+//           <li key={i}>{a.year} · {a.text}</li>
+//         ))}
+//       </ul>
+//     </Section>
+//   );
+// }
 
 function CV(){
   return (
     <Section id="cv" title="CV" icon={<FileText className="h-6 w-6" /> }>
       <div className="flex flex-wrap items-center gap-3">
         <Button asChild>
-          <a href={profile.cvUrl} target="_blank" rel="noreferrer">下载 PDF</a>
+          <a href={profile.cvUrl} target="_blank" rel="noreferrer">Download PDF</a>
         </Button>
-        <a className="underline text-sm" href={profile.cvUrl} target="_blank" rel="noreferrer">在线预览</a>
+        <a className="underline text-sm" href={profile.cvUrl} target="_blank" rel="noreferrer">Online View</a>
       </div>
     </Section>
   );
@@ -356,8 +393,8 @@ function Footer(){
         <div>© {new Date().getFullYear()} {profile.nameEn}</div>
         <div className="flex gap-3">
           {profile.socials.github && <a className="underline" href={profile.socials.github}>GitHub</a>}
-          {profile.socials.scholar && <a className="underline" href={profile.socials.scholar}>Scholar</a>}
-          {profile.socials.website && <a className="underline" href={profile.socials.website}>Website</a>}
+          {/* {profile.socials.scholar && <a className="underline" href={profile.socials.scholar}>Scholar</a>}
+          {profile.socials.website && <a className="underline" href={profile.socials.website}>Website</a>} */}
         </div>
       </div>
     </footer>
@@ -381,21 +418,34 @@ function AuroraBackground(){
   );
 }
 
-export default function PersonalHomepage(){
+export default function PersonalHomepage() {
   return (
-    <div className="relative min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50">
-      <TopNav />
-      <AuroraBackground />
-      <main>
-        <Hero />
-        <Projects />
-        <ReadingGroup />
-        <Publications />
-        <Teaching />
-        <Awards />
-        <CV />
-      </main>
-      <Footer />
+    <div className="relative min-h-screen text-neutral-900 dark:text-neutral-50">
+      {/* 背景始终在最底层 */}
+      <div className="fixed inset-0 -z-10">
+        <NovatrixBackground
+  color={[0.7, 0.7, 0.7]}  // 灰色主调
+  speed={0.8}
+  amplitude={0.05}
+  mouseReact
+/>
+
+      </div>
+
+      {/* 白色内容容器，四周略透 */}
+      <div className="relative z-10 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-sm min-h-screen rounded-t-3xl shadow-lg overflow-hidden">
+        <TopNav />
+        <main>
+          <Hero />
+          <Projects />
+          <ReadingGroup />
+          {/* <Publications /> */}
+          {/* <Teaching /> */}
+          {/* <Awards /> */}
+          <CV />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
