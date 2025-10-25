@@ -11,20 +11,21 @@ export default function VantaGlobe() {
   useEffect(() => {
     if (!vantaEffect.current && vantaRef.current) {
       vantaEffect.current = GLOBE({
-        el: vantaRef.current,
-        THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0x8f9bac,
-        color2: 0xd6b278,
-        size: 1.1,
-        backgroundColor: 0xf5f5f5, // 改为浅灰色,接近白色
-      });
+      el: vantaRef.current,
+      THREE,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x9ca3af,        // 主线颜色：银灰
+      color2: 0x3b82f6,       // 副色：低饱和蓝（科技感）
+      size: 1.2,
+      backgroundColor: 0x0f0f0f, // 背景深灰黑，和主页黑白灰协调
+    });
+
     }
 
     return () => {
