@@ -13,11 +13,6 @@ import VantaGlobe from "@/components/ui/VantaGlobe";
 // 2. 将简历 PDF 放到 /public/cv.pdf 然后更新 cvUrl
 // 3. Reading Group 与 Publications 写入下方数据
 // 4. 发布到 GitHub Pages 或 Netlify 即可
-export const metadata = {
-  title: "Yiheng Zhang",
-  description:
-    "Yiheng Zhang is a senior student in Computer Science at the University of Wisconsin–Madison, focusing on machine learning, large language models, diffusion language models, and trustworthy AI.",
-};
 
 const profile = {
   nameEn: "Yiheng Zhang",
